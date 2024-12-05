@@ -1,11 +1,11 @@
 body {
     font-family: 'Times New Roman', Times, serif;
-    background-color: red;
+    background-image: url(Best\ Christmas\ lamp.jpg);
   }
   
   h2 {
     margin: 20px;
-    color: darkred;
+    color: red;
     font-size: 24px;
     font-family: 'Comic Sans MS', 'Comic Sans', cursive;
   }
@@ -21,13 +21,13 @@ body {
     padding: 10px;
     max-width: 800px;
     margin: 0 auto;
-    background-color: tomato;
+    background-color: white;
     border-radius: 20px;
   }
   
   .calendar-box {
     background-color: #ff0000;
-    color: #ff9999;
+    color: yellow;
     font-size: 8px;
     text-align: left;
     padding: 2px;
