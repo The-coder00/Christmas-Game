@@ -9,26 +9,22 @@ const hackedEmojis = {
 // Function to replace a single emoji shortcode with the hacked version
 function emojifyWord(word) {
     if (word.startsWith(":") && word.endsWith(":")) {
-        const shortcode = word.slice(1, -1);
-        return hackedEmojis[shortcode] || word;
+        const shortcode = word.slice(1, -1); // Remove the colons
+        return hackedEmojis[shortcode] || word; // Return hacked emoji or original word
     }
-    return word;
+    return word; // Return word if no colons
 }
 
 // Function to replace emoji shortcodes in a phrase
 function emojifyPhrase(phrase) {
-    const words = phrase.split(" ");
-    const emojifiedWords = words.map(word => emojifyWord(word));
-    return emojifiedWords.join(" ");
+    const words = phrase.split(" "); // Split phrase into words
+    const emojifiedWords = words.map(word => emojifyWord(word)); // Map each word
+    return emojifiedWords.join(" "); // Join back into a phrase
 }
 
 // Add event listener to process button
-const processBtn = document.getElementById("process-btn");
-const inputText = document.getElementById("input-text");
-const outputText = document.getElementById("output-text");
-
-processBtn.addEventListener("click", () => {
-    const phrase = inputText.value;
-    const result = emojifyPhrase(phrase);
-    outputText.innerText = result;
+document.getElementById("process-btn").addEventListener("click", () => {
+    const phrase = document.getElementById("input-text").value; // Get input value
+    const result = emojifyPhrase(phrase); // Process the phrase
+    document.getElementById("output-text").innerText = result; // Display the result
 });
